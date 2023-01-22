@@ -9,7 +9,7 @@ to go back to sleep after each and every alarm. My brother hates this as he wake
 original iphone alarm sound earlier than what I would set my alarm times to. I don't want this, but there aren't many faults with his arguments.
 
 I recently found how people wake up to "sun" alarms where they adjust their brightness 15~30 minutes before their set alarm, giving the body the melatonin it needs
-and wake up more naturally. Sounds very appealing, since I usually have to wake up relatively early and my bed does not get an inch of sunlight at all. 
+and wake up more naturally. Sounds very appealing, since I usually have to wake up relatively early and my bed does not get an inch of sunlight at all. Hence, the goal of this project is to make "the sun in my face"
 
 Additionally, this project is my own "test" to see if I remember how to code in Kotlin and Android Studio. I haven't touched them since SPHS 2021 and I thought it
 would be good practice to re-learn from my past projects.
