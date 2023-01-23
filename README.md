@@ -16,7 +16,7 @@ would be good practice to re-learn from my past projects.
 
 Current Equipment:
 
-- Google Nexus 7 (has been jailbroken and updated with Android 10)
+- Google Nexus 7 (has been jailbroken and updated with Android 10 via LineageOS)
 - Ender 3 Pro 3D printer
 
 **Features:**
