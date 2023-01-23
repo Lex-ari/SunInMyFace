@@ -5,19 +5,35 @@
     android:id="@+id/layout_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFEEAF"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_main_darkColorAlpha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/black" />
 
     <EditText
         android:id="@+id/editText_main_alarmTime"
         android:layout_width="181dp"
         android:layout_height="66dp"
+        android:backgroundTint="#00000000"
+        android:cursorVisible="false"
         android:ems="10"
+        android:hint="alarm time here"
         android:inputType="time"
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:text="88:88"
         android:textAlignment="center"
         android:textColor="#9F9E9E"
+        android:textColorHighlight="@color/notsowhite"
+        android:textColorLink="@color/megagray"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,13 +59,20 @@
         android:id="@+id/textView_main_setTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Time?"
+        android:text="set time?"
         android:textColor="#7A7A7A"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_main_alarmTime"
         app:layout_constraintVertical_bias="0.123" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_main_textGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView_main_trueTime,editText_main_alarmTime,textView_main_setTime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.suninmyface.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -61,19 +62,28 @@ class MainActivity : AppCompatActivity() {
         var alarmMinutes = setMinute + setHour * 60
         var difference = alarmMinutes - currentMinutes
         runOnUiThread {
-            if (difference in 0..60) {
-                var scale = 1 - difference / 60.0
-                binding.layoutMain.setBackgroundColor(
-                    Color.rgb(
-                        (255 * scale).toInt(),
-                        (255 * scale).toInt(),
-                        (255 * scale).toInt()
-                    )
-                )
-
+            if (difference in -60..60) {
+                var scale = difference / 60.0
+                if (scale < 0){
+                    scale = 0.0
+                }
+                binding.imageViewMainDarkColorAlpha.alpha = scale.toFloat()
+                var whiteness = (255 * (1 - scale)).toInt() + 30
+                if (whiteness > 255){
+                    whiteness = 255
+                }
+                var textColor = Color.rgb(whiteness, whiteness, whiteness)
+                binding.textViewMainTrueTime.setTextColor(textColor)
+                binding.textViewMainSetTime.setTextColor(textColor)
+                binding.editTextMainAlarmTime.setTextColor(textColor)
             } else {
-                binding.layoutMain.setBackgroundColor(Color.rgb(0, 0, 0))
+                binding.imageViewMainDarkColorAlpha.alpha = 1f
+                var textColor = Color.rgb(30, 30, 30)
+                binding.textViewMainTrueTime.setTextColor(textColor)
+                binding.textViewMainSetTime.setTextColor(textColor)
+                binding.editTextMainAlarmTime.setTextColor(textColor)
             }
         }
+
     }
 }
