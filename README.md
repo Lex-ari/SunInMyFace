@@ -16,12 +16,12 @@ would be good practice to re-learn from my past projects.
 
 Current Equipment:
 
-- Google Nexus 7 (has been jailbroken and updated with Android [UPDATE VERSION])
+- Google Nexus 7 (has been jailbroken and updated with Android 10 via LineageOS)
 - Ender 3 Pro 3D printer
 
 **Features:**
-- [CURRENT PROGRESS] Gradual Background "Brightness" increasing
-- [CURRENT PROGRESS] Time Display
-- [CURRENT PROGRESS] Set Alarm Time
+- [COMPLETED] Gradual Background "Brightness" increasing
+- [COMPLETED] Time Display
+- [COMPLETED] Set Alarm Time
 - [PLANNED] Saved Alarm Times
 - [PLANNED] Color Customization
